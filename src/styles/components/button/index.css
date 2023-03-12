@@ -1,0 +1,19 @@
+.button-base {
+  padding: 15px;
+}
+.button-base__primary {
+  background-color: #24252B;
+}
+.button-base__disabled {
+  background-color: #33353D;
+}
+.button-base__secondary {
+  background-color: #FFFFFF;
+  border: #D0D4E0 solid 1px;
+  color: #24252B;
+}
+.button-base__secondary-disabled {
+  background-color: #E9EBF0;
+  border: #E9EBF0 solid 1px;
+  color: #ADB0BA;
+}/*# sourceMappingURL=index.css.map */

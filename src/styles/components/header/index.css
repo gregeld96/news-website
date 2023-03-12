@@ -1,0 +1,185 @@
+.notification-bar {
+  padding: 15px 0;
+  background-color: #24252B;
+  color: #FFFFFF;
+}
+.notification-bar__text {
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0.016em;
+  margin: 0;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.custom-navbar {
+  display: flex;
+  background-color: black;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.custom-navbar-header {
+  padding-inline: 20px;
+  padding-block: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+.custom-navbar-nav-link {
+  text-transform: uppercase;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 500px;
+  cursor: pointer;
+  color: #FFFFFF;
+}
+@media (max-width: 780px) {
+  .custom-navbar-nav-link {
+    font-size: 0.8em;
+  }
+}
+.custom-navbar-nav-link .active {
+  font-weight: bolder;
+}
+.custom-navbar-nav-link .link {
+  text-decoration: none;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+.custom-navbar-account-link {
+  justify-content: space-evenly;
+  align-items: center;
+  text-transform: uppercase;
+}
+.custom-navbar-account-link .header-button {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  padding: 10px;
+  border: #D0D4E0 solid 1px;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+@media (max-width: 780px) {
+  .custom-navbar-account-link .header-button {
+    font-size: 0.5em;
+  }
+}
+.custom-navbar-account-link .header-icon {
+  -webkit-margin-start: 10px;
+          margin-inline-start: 10px;
+  cursor: pointer;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 280px auto;
+  grid-template-rows: auto;
+  overflow: hidden;
+  background-color: rgb(50, 50, 50) !important;
+}
+.layout .content {
+  height: 80vh;
+}
+.layout .content__body {
+  height: 88vh;
+  overflow-y: auto;
+  padding-bottom: 5vh !important;
+}
+.layout .content .sidebar {
+  padding: 20px 0px 0px 0px;
+  background-color: rgb(50, 50, 50) !important;
+}
+.layout .content .sidebar__body {
+  height: 88vh;
+  overflow-y: auto;
+  padding-bottom: 5vh;
+}
+.layout .content .sidebar .logo {
+  display: block;
+  margin-bottom: 25px;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+.layout .content .sidebar__main {
+  font-size: 1.2em;
+  height: 70px;
+  background-color: rgb(50, 50, 50) !important;
+  color: #FFFFFF;
+  padding: 5px 0.7em;
+  display: flex;
+  align-items: center;
+}
+.layout .content .sidebar__main .title {
+  padding-left: 15px;
+}
+.layout .content .sidebar__main-active {
+  background-color: rgb(50, 50, 50) !important;
+  color: #FFFFFF;
+  border-left: thick solid #FFFFFF;
+}
+.layout .content .sidebar__parent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2em;
+  height: 70px;
+  background-color: rgb(50, 50, 50) !important;
+  color: #FFFFFF;
+  padding: 5px 0.7em;
+}
+.layout .content .sidebar__parent .title {
+  padding-left: 15px;
+}
+.layout .content .sidebar__children {
+  display: flex;
+  align-items: center;
+  font-size: 1.2em;
+  height: 70px;
+  background-color: rgb(50, 50, 50) !important;
+  color: #FFFFFF;
+  padding: 5px 0.7em;
+  margin-left: 1.5em;
+}
+.layout .content .sidebar__children .title {
+  padding-left: 15px;
+}
+.layout .content .sidebar__children-active {
+  background-color: #24252B;
+  color: #FFFFFF;
+  border-left: thick solid #FFFFFF;
+}
+.layout .content .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-transform: uppercase;
+  background-color: #FFFFFF;
+  padding: 20px 0px;
+  margin-bottom: 20px;
+}
+.layout .content .header .label {
+  -webkit-margin-start: 25px;
+          margin-inline-start: 25px;
+  font-size: 1.4em;
+  font-weight: 600;
+}
+.layout .content .header__content {
+  text-align: right !important;
+}
+.layout .content .header__account {
+  display: inline-flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 150px;
+}
+.layout .content .header .icon {
+  -webkit-margin-start: 10px;
+          margin-inline-start: 10px;
+  cursor: pointer;
+  color: #24252B;
+}
+.layout .content .body {
+  padding: 0 25px;
+  height: 100%;
+}/*# sourceMappingURL=index.css.map */

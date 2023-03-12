@@ -1,0 +1,25 @@
+@import '../../settings/constants';
+
+.button-base {
+    padding: 15px;
+
+    &__primary {
+        background-color: $primaryColorBg;
+    }
+
+    &__disabled {
+        background-color: $primaryDisabledColorBg;
+    }
+
+    &__secondary {
+        background-color: $secondaryColorBg;
+        border: $secondaryButtonBorder;
+        color: $secondaryColorTxt;
+    }
+
+    &__secondary-disabled {
+        background-color: $secondaryDisabledColorBg;
+        border: $secondaryDisableButtonBorder;
+        color: $secondaryDisableTxt;
+    }
+}

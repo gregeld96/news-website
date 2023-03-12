@@ -1,0 +1,14 @@
+p {
+  margin: 0 !important;
+}
+
+.layout__non {
+  background-color: black !important;
+}
+.layout__main {
+  background-color: rgb(50, 50, 50) !important;
+}
+
+.custom-container {
+  padding: 25px;
+}/*# sourceMappingURL=index.css.map */

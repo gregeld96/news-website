@@ -1,0 +1,229 @@
+@import '../../settings/constants';
+
+@mixin inputPadding {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+@mixin passwordField {
+    width: 100%;
+    padding-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: $borderDefault;
+    background-color: $secondaryColorBg;
+}
+
+.field {
+    width: 100%;
+
+    &__container {
+        padding-top: 0.5rem;
+        padding-bottom: 1rem;
+    }
+
+    .label {
+        margin-bottom: 8px;
+        font-weight: 500;
+        font-size: 1em;
+        line-height: 22px;
+        color: $primaryColorTxt;
+
+        &__optional {
+            font-weight: 400;
+            font-size: 1.2rem;
+            line-height: 22px;
+            color: $secondaryDisableTxt;
+        }
+
+        &__error {
+            font-weight: 400;
+            color: $errorColorTxt;
+            padding-top: 5px;
+        }
+    }
+
+    .input {
+        padding-top: 0.7em;
+        padding-bottom: 0.7em;
+
+        &__normal {
+            @include inputPadding;
+            border: $borderDefault;
+        }
+
+        &__error {
+            @include inputPadding;
+            border: $borderError;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    .password {
+        @include passwordField;
+
+        &__input {
+            width: 100%;
+            padding-left: 10px;
+            padding-right: 10px;
+            border: $borderColor solid 0px;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        &__error {
+            @include passwordField;
+            border-color: #e10000;
+        }
+    }
+
+    .group {
+        display: flex;
+        border: $borderDefault;
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+    
+           .group {
+                position: relative;
+                display: inline-block;
+            }
+    
+           .content {
+                position: absolute;
+                border: 1px solid $statusBackgroudColor;
+                padding: 5px;
+                margin: 5px 0;
+                border-radius: 5px;
+                z-index: 100;
+                background-color: white;
+                max-height: 150px;
+            }
+    
+           .list {
+                padding: 5px 0px;
+                overflow: auto;
+                max-height: 150px;
+            }
+    
+           .item {
+                padding: 5px 0px;
+                cursor: pointer;
+                width: 100%;
+                display: inline-flex;
+    
+                &:hover {
+                    background-color: $primaryColorBg;
+                    color: $primaryColorTxt;
+                }
+    
+                &__active {
+                    padding: 5px 0px;
+                    cursor: pointer;
+                    background-color: $primaryColorBg;
+                    color: $primaryColorTxt;
+                    width: 100%;
+                }
+    
+                &-country {
+                    padding-right: 5px;
+                }
+            }
+        }
+
+        &__dropdown {
+            width: 90px;
+            display: flex;
+            align-items: center;
+            padding-right: 10px;
+        }
+    }
+
+    .dropdown__general {
+        width: 100%;
+        position: relative;
+        display: inline-block;
+
+       .group {
+            position: relative;
+            display: inline-block;
+        }
+
+       .content {
+            position: absolute;
+            border: 1px solid $statusBackgroudColor;
+            padding: 5px;
+            margin: 5px 0;
+            border-radius: 5px;
+            z-index: 100;
+            background-color: white;
+            overflow: auto;
+            max-height: 85px;
+        }
+
+       .list {
+            padding: 5px 0px;
+            overflow: auto;
+            max-height: 150px;
+        }
+
+       .item {
+            padding: 5px 0px;
+            cursor: pointer;
+            width: 100%;
+            display: inline-flex;
+
+            &:hover {
+                background-color: $primaryColorBg;
+                color: $primaryColorTxt;
+            }
+
+            &__active {
+                padding: 5px 0px;
+                cursor: pointer;
+                background-color: $primaryColorBg;
+                color: $primaryColorTxt;
+                width: 100%;
+            }
+
+            &-country {
+                padding-right: 5px;
+            }
+        }
+    }
+
+
+    .photo__border {
+        border: $borderDefault;
+        height: 200px;
+        width: 200px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .photo__border-filled {
+        border: $borderDefault;
+        height: 200px;
+        width: 200px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .photo__image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        color: $secondaryColor;
+    }
+
+    
+}

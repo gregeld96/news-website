@@ -1,0 +1,17 @@
+p {
+    margin: 0 !important
+}
+
+.layout {
+    &__non{
+        background-color: black !important;
+    }
+
+    &__main {
+        background-color: rgb(50, 50, 50) !important;
+    }
+}
+
+.custom-container {
+    padding: 25px;
+}

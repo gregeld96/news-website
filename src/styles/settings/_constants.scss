@@ -1,0 +1,31 @@
+// Layout
+$maxScreenWidth: 1440px;
+
+// Color Pallete
+$secondaryColor: #D0D4E0;
+$borderColor: #ddcece;
+$generalColor: #000;
+$textColorCapsule: #ffffff;
+$cardBackgroundColor: #ffffff;
+$sliderBackgroudColor: #ffffff;
+$statusBackgroudColor: #E9EBF0;
+
+// Text Setting
+$primaryColorTxt: #FFFFFF;
+$primaryDisableTxt: #E9EBF0;
+$secondaryColorTxt: #24252B;
+$secondaryDisableTxt: #ADB0BA;
+$tertiaryColorTxt: #858895;
+$errorColorTxt: #e81010;
+
+// Background Setting
+$primaryColorBg: #24252B;
+$primaryDisabledColorBg: #33353D;
+$secondaryColorBg: #FFFFFF;
+$secondaryDisabledColorBg: #E9EBF0;
+
+// Border Setting
+$borderDefault: #D0D4E0 solid 1px;
+$borderError: #e10000 solid 1.5px; 
+$secondaryButtonBorder: #D0D4E0 solid 1px;
+$secondaryDisableButtonBorder: #E9EBF0 solid 1px;

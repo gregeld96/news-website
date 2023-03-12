@@ -1,0 +1,15 @@
+.login-row {
+  height: 100vh;
+}
+.login__container .title {
+  font-size: 1.3em;
+  font-weight: 600;
+}
+.login__container .logo {
+  height: 125px;
+  width: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+}/*# sourceMappingURL=index.css.map */

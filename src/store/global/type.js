@@ -1,0 +1,1 @@
+export const INITIATE_GLOBAL = "INITIATE_GLOBAL";

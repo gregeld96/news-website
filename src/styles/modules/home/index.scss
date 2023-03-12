@@ -1,0 +1,104 @@
+@import '../../settings/constants';
+
+.header {
+    &__title {
+        font-size: 1.4rem;
+        font-weight: bolder;
+        color: $primaryColorTxt;
+        text-transform: uppercase;
+    }
+
+    &__subheading {
+        font-size: 1em;
+        color: $primaryColorTxt;
+        text-transform: uppercase;
+    }
+}
+
+.section-articles {
+    overflow: auto;
+    white-space: nowrap;
+    scrollbar-width: none;
+
+    .custom-card {
+        width: calc(100%/4);
+        display: inline-flex;
+        margin-inline-end: 25px;
+    }
+
+    .image-article {
+        object-fit: cover;
+        height: 200px;
+    }
+
+    .date-article {
+        font-size: .6em;
+        font-weight: 500;
+        color: $tertiaryColorTxt;
+        font-style: italic;
+    }
+
+    .title-article {
+        font-weight: 600;
+        text-transform: capitalize;
+        font-size: 1.2em;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    .desc-article {
+        height: 100px;
+        overflow: hidden;
+        font-size: .8em;
+        white-space: normal;
+    }
+}
+
+.dashboard-articles {
+    .image-article {
+        object-fit: cover;
+        height: 200px;
+    }
+
+    .date-article {
+        font-size: .6em;
+        font-weight: 500;
+        color: $tertiaryColorTxt;
+        font-style: italic;
+    }
+
+    .title-article {
+        font-weight: 600;
+        text-transform: capitalize;
+        font-size: 1.2em;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    .desc-article {
+        height: 100px;
+        overflow: hidden;
+        font-size: .8em;
+        white-space: normal;
+    }
+}
+
+.community {
+
+    .title {
+        font-size: 1.4em;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+    
+    .subheading {
+        font-size: 1.1em;
+    }
+}
+
+.container-padding-home {
+    padding-inline: 25px;
+    padding-bottom: 50px;
+}
