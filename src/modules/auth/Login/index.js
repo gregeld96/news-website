@@ -22,7 +22,6 @@ function LoginView() {
   const { user, finishInitiate } = useSelector(state => state.global);
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const location = useLocation();
 
   // Function
   function resetError() {

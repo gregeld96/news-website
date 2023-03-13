@@ -42,7 +42,7 @@ function DropdownField({title, errorMessage = "", dropdownValue, onChange, itemL
                             {
                                 items && items.length > 0 ? items.map((item) => {
                                     return (
-                                        <div key={item?.value} className={`${dropdownValue === item?.name ? 'item__active' : 'item'}`} onClick={() => clicked(item)}>{item?.name.toUpperCase()}</div>
+                                        <div key={item?.value} className={`${dropdownValue === item?.value ? 'item__active' : 'item'}`} onClick={() => clicked(item)}>{item?.name.toUpperCase()}</div>
                                     )
                                 }) : null
                             }

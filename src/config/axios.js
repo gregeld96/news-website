@@ -22,6 +22,23 @@ const HttpPost = async (url, data, tempToken) => {
     });
 };
 
+const HttpPut = async (url, data, tempToken) => {
+  const accessToken = localStorage.getItem('access-token');
+
+  return httpClient.put(apiUrl + url, data, {
+    headers: {
+      "access_token": accessToken,
+    },
+  })
+    .then((res) => {
+      return res.data.data;
+    })
+    .catch((error) => {
+      ErrorHandler(error);
+      throw error;
+    });
+};
+
 const HttpGet = async (url, tempToken) => {
   const accessToken = localStorage.getItem('access-token');
 
@@ -53,4 +70,4 @@ const HttpGetWithoutToken = async (url) => {
     });
 };
 
-export { HttpPost, HttpGet, HttpGetWithoutToken };
+export { HttpPost, HttpGet, HttpGetWithoutToken, HttpPut };

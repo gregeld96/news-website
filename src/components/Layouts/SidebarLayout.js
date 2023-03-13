@@ -40,7 +40,7 @@ const SidebarLayout = () => {
     }, [location.pathname])
 
 
-    const data = [
+    const data = user?.role === 'member' ? [
         {
             title: "Dashboard",
             href: "/dashboard",
@@ -51,7 +51,7 @@ const SidebarLayout = () => {
         {
             title: "Article",
             href: "/dashboard/articles",
-            id: 3,
+            id: 2,
             collapsible: true,
             icon: <StackLineIcon />,
             children: [
@@ -67,7 +67,53 @@ const SidebarLayout = () => {
                 },
             ],
         },
-    ]
+    ] : user?.role === 'admin' ? [
+        {
+            title: "Dashboard",
+            href: "/dashboard",
+            icon: <User6LineIcon />,
+            id: 1,
+            collapsible: false,
+        },
+        {
+            title: "Article",
+            href: "/dashboard/articles",
+            collapsible: true,
+            id: 2,
+            icon: <StackLineIcon />,
+            children: [
+                {
+                    title: "List",
+                    href: "/",
+                    icon: <ListCheckIcon />,
+                },
+                {
+                    title: "Create",
+                    href: "/create",
+                    icon: <AddCircleLineIcon />,
+                },
+            ],
+        },
+        {
+            title: "Category",
+            href: "/dashboard/Categories",
+            collapsible: true,
+            id: 3,
+            icon: <StackLineIcon />,
+            children: [
+                {
+                    title: "List",
+                    href: "/",
+                    icon: <ListCheckIcon />,
+                },
+                {
+                    title: "Create",
+                    href: "/create",
+                    icon: <AddCircleLineIcon />,
+                },
+            ],
+        },
+    ] : [];
 
     return (
         <>

@@ -13,12 +13,12 @@ const Register = Loadable(lazy(() => import('../modules/auth/Register')));
 
 // MAIN
 const Home = Loadable(lazy(() => import('../modules/main/Home')));
+const CategoriesPage = Loadable(lazy(() => import('../modules/main/Category')));
 
 // Dashboard
 const ArticleForm = Loadable(lazy(() => import('../modules/dashboard/Article/form')));
+const ArticleEditPage = Loadable(lazy(() => import('../modules/dashboard/Article/edit')));
 const ArticleUserPage = Loadable(lazy(() => import('../modules/dashboard/Article')));
-const CategoriesPage = Loadable(lazy(() => import('../modules/main/Category')));
-
 
 
 
@@ -73,7 +73,17 @@ const appRoute = [
                         path: 'create',
                         element: <ArticleForm />
                         
-                    }
+                    },
+                    {
+                        path: 'edit',
+                        children: [
+                            {
+                                path: ':slug',
+                                element: <ArticleEditPage />     
+                            },
+                        ]
+                        
+                    },
                 ]
             }
         ]

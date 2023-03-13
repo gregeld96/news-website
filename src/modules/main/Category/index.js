@@ -41,7 +41,7 @@ function CategoriesPage() {
     }, [tab, categories]);
     
     return (
-        <div>
+        <div className="content-body">
             <div className="custom-container">
                 <Row xs={4}>
                     {
@@ -54,25 +54,25 @@ function CategoriesPage() {
                         })
                     }
                 </Row>
-                <Row xs={3} className="gx-1">
+                <Row xs={5} className="gx-1 dashboard-articles">
                 {
                     allArticles.length > 0 ? allArticles.map((article) => {
                         return (
                             <Col key={article.id}>
                                 <ArticleCard
-                                key={article.id}
-                                createdDate={moment(article.createdAt).format("DD-MMMM-YYYY")}
-                                creatorName={article.user.name}
-                                title={article.title}
-                                content={article.content}
-                                img={article.image}
-                            />
+                                    key={article.id}
+                                    createdDate={moment(article.createdAt).format("DD-MMMM-YYYY")}
+                                    creatorName={article.user.name}
+                                    title={article.title}
+                                    content={article.content}
+                                    img={article.image}
+                                />
                             </Col>
 
                         )
                     }) : null
                 }
-            </Row>
+                </Row>
             </div>
         </div>
     )

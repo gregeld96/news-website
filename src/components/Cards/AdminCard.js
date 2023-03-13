@@ -3,7 +3,7 @@ import User6LineIcon from 'remixicon-react/User6LineIcon';
 import BaseButton from '../Buttons/BaseButton';
 import CancelButton from '../Buttons/CancelButton';
 
-function AdminArticleCard({ img, creatorName, createdDate, content, title, onClick }) {
+function AdminArticleCard({ onDelete, img, creatorName, createdDate, content, title, onClick, onEdit }) {
     return (
         <div className="card custom-card mt-3" onClick={onClick}>
             <img src={img?.includes("https") ? img : `http://192.168.18.5:3000/${img}`}className="rounded-top image-article" />
@@ -17,10 +17,10 @@ function AdminArticleCard({ img, creatorName, createdDate, content, title, onCli
                 </div>
                 <Row className='py-3'>
                     <Col>
-                        <BaseButton title={'Edit'} />
+                        <BaseButton title={'Edit'} onClick={onEdit} />
                     </Col>
                     <Col>
-                        <CancelButton title={"Delete"} />
+                        <CancelButton title={"Delete"} onClick={onDelete} />
                     </Col>
                     
                 </Row>

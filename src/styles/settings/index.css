@@ -9,6 +9,10 @@ p {
   background-color: rgb(50, 50, 50) !important;
 }
 
+.content-body {
+  height: 90vh;
+}
+
 .custom-container {
   padding: 25px;
 }/*# sourceMappingURL=index.css.map */
