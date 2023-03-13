@@ -6,7 +6,7 @@ import CancelButton from '../Buttons/CancelButton';
 function AdminArticleCard({ onDelete, img, creatorName, createdDate, content, title, onClick, onEdit }) {
     return (
         <div className="card custom-card mt-3" onClick={onClick}>
-            <img src={img?.includes("https") ? img : `http://192.168.18.5:3000/${img}`}className="rounded-top image-article" />
+            <img src={img?.includes("https") ? img : `http://localhost:3000/${img}`}className="rounded-top image-article" />
             <div className="px-3 py-3">
                 <p className="date-article">{createdDate}</p>
                 <p className="fw-bolder title-article">{title}</p>

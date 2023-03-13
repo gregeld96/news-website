@@ -57,8 +57,12 @@ function ArticleForm() {
 
             let res = await HttpPost('articles/add', payload);
 
+            setCategory("");
+            setContent("");
+            setTitle("");
+            setThumbnail(null);
+            
             setSubmit(false);
-            console.log(res);
         } catch (error) {
             console.log(error)
         }

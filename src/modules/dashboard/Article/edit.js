@@ -1,17 +1,18 @@
 import { useEffect, useState } from "react";
 import { Col, Row } from "react-bootstrap";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import BaseButton from "../../../components/Buttons/BaseButton";
 import DropdownField from "../../../components/Fields/DropdownField";
 import GeneralField from "../../../components/Fields/GeneralField";
 import TextField from "../../../components/Fields/TextAreaField";
 import UploadPhoto from "../../../components/Fields/UploadPhoto";
-import { HttpGet, HttpPost } from "../../../config/axios";
+import { HttpGet, HttpPost, HttpPut } from "../../../config/axios";
 
 
 function ArticleEditForm() {
     // Setting
     const param = useParams();
+    const navigate = useNavigate()
 
     // State
     const [title, setTitle] = useState("");
@@ -20,6 +21,7 @@ function ArticleEditForm() {
     const [content, setContent] = useState("");
     const [thumbnail, setThumbnail] = useState(null);
     const [imageUrl, setImageUrl] = useState("");
+    const [article, setArticle] = useState(null);
     const [submit, setSubmit] = useState(false);
 
     const statusList = [
@@ -54,8 +56,7 @@ function ArticleEditForm() {
             setStatus({name: res.status, value: res.status});
             setCategory(res.category);
             setImageUrl(res.image)
-
-            console.log(res);
+            setArticle(res);
         } catch (error) {
             console.log(error)
         }
@@ -79,10 +80,13 @@ function ArticleEditForm() {
             payload.append('content', content);
             payload.append('photo', thumbnail ? thumbnail : null);
 
+            let res = await HttpPut(`articles/${article.id}`, payload);
+
             setSubmit(false);
-            console.log(res);
+            navigate('/dashboard/articles');
         } catch (error) {
             console.log(error)
+            setSubmit(false);
         }
     }
 
